@@ -6,14 +6,6 @@ import forceTick from "forceTick";
 Vue.use(forceTick);
 ```
 
-## History
-
-- [double requestanimationframe work](https://stackoverflow.com/questions/44145740/how-does-double-requestanimationframe-work)
-
-- [Vue.nextTick doesn't seem to cover it.](https://github.com/vuejs/vue/issues/9200)
-
-## Usage
-
 ### Global
 
 ```js
@@ -26,9 +18,7 @@ Vue.$forceTick(() => {
 await Vue.$forceTick();
 ```
 
-### js
-
-```javascript
+```js
 methods: {
   func () {
     this.$forceTick(() => {

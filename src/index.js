@@ -1,4 +1,4 @@
-const doubleRequestAnimationFrame = (callBack) => {
+const request = (callBack) => {
   requestAnimationFrame(() => {
     requestAnimationFrame(callBack);
   });
@@ -6,10 +6,10 @@ const doubleRequestAnimationFrame = (callBack) => {
 
 const nextTick = (callBack) => {
   if (callBack && typeof callBack === "function") {
-    doubleRequestAnimationFrame(callBack);
+    request(callBack);
   } else {
     return new Promise((resolve) => {
-      doubleRequestAnimationFrame(resolve);
+      request(resolve);
     });
   }
 };
